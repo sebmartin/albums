@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block page_title %} - {{ album.title }}{% endblock %}
+
+{% block js %}
+{{ block.super }}
+$(document).ready(function() { 
+    $("div.thumbnail a").fancybox( {'hideOnContentClick' : true} ); 
+    $("a#video_thumbnail").fancybox({
+                'zoomSpeedIn':  0, 
+                'zoomSpeedOut': 0
+            });
+    })
+{% endblock %}
+
+{% block main_content %}
+{% for media in media_list %}
+<div class="thumbnail">
+    <a 
+        {% ifequal media.mime 'application/x-shockwave-flash' %}
+            {# video thumbnail #}
+            id="video_thumbnail"
+            href="#video_{{ media.id }}" 
+            class="{frameWidth: 425, frameHeight: 355}"
+        {% else %}
+            {# standard photo thumbnail #}
+            href="{{ media.url }}" 
+        {% endifequal %}
+        title="{{ media.description }}"
+        rel="all"
+    ><img 
+        alt="{{ media.description }}" 
+        src="{{ media.mediathumbnail_set.all.0.url }}"
+        width="{{ media.mediathumbnail_set.all.0.width }}"
+        height="{{ media.mediathumbnail_set.all.0.height }}"
+        border="0"
+        class="thumbnail-image" 
+    /></a><br/>
+    {% ifequal media.mime 'application/x-shockwave-flash' %}
+    {# define how the videos should show up when clicked #}
+    <div id="video_{{ media.id }}" style="display: none">
+        <object width="425" height="355"><param name="movie"
+        value="http://video.google.com/googleplayer.swf?autoPlay=true&videoUrl={{ media.url|urlencode }}" 
+        ></param><param name="wmode" value="transparent"></param><embed
+        src="http://video.google.com/googleplayer.swf?autoPlay=true&videoUrl={{ media.url|urlencode }}" 
+        type="application/x-shockwave-flash" wmode="transparent" width="425"
+        height="355"></embed></object>
+    </div>
+    {% endifequal %}
+</div>
+{% endfor %}
+
+<div style="clear:both" />
+
+{% ifnotequal paginator.num_pages 1 %}
+<div class="paginator" style="clear: both; height: 20px">
+Page: 
+{% for page_num in paginator.page_range %}
+    {% ifequal page_num page.number %}
+    <span class="page-number-current">
+    {{ page_num }}
+    </span>
+    {% else %}
+    <span class="page_number">
+    <a href="{% url albums.views.album album.id page_num %}">{{ page_num }}</a>
+    </span>
+    {% endifequal %}
+{% endfor %}
+</div>
+{% endifnotequal %}
+
+{% endblock %}

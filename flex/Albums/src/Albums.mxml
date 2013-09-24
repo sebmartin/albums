@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" borderColor="#870F0F" alpha="1.0"
+    creationComplete="photoService.send();">
+
+    <mx:Script>
+        <![CDATA[
+        	import mx.controls.Alert;
+            private function photoResultHandler(event:Event):void
+            {
+                trace(event);
+            }
+            
+            private function photoFaultHandler(event:Event):void
+            {
+                trace(event);
+            }
+        ]]>
+    </mx:Script>
+
+    <mx:HTTPService 
+        id="photoService"
+        url="feed://picasaweb.google.com/data/feed/base/user/gee.sucka.foo" 
+        resultFormat="xml"
+        result="photoResultHandler(event);"
+        fault="photoFaultHandler(event);"
+    />
+    
+    <mx:DataGrid id="myDataGrid" dataProvider="{photoService.lastResult.rss.channel.item}"
+width="417.5" height="144"
+x="199.5" y="27">
+<mx:columns>
+<mx:DataGridColumn headerText="Date" dataField="pubDate" textAlign="left"/>
+<mx:DataGridColumn headerText="Title" dataField="title" textAlign="center"/>
+</mx:columns>
+</mx:DataGrid>
+
+    <mx:VBox width="175" top="0" bottom="0" left="0" borderColor="#0B333C" borderStyle="solid" cornerRadius="20" backgroundColor="#0B333C" alpha="1.0" backgroundAlpha="0.51">
+    </mx:VBox>
+</mx:Application>

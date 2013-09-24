@@ -1,0 +1,252 @@
+!SESSION 2009-04-04 22:16:10.057 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.5.0_16
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=carbon, NL=en_US
+Command-line arguments:  -os macosx -ws carbon -arch x86 -data /Users/seb/dev/albums
+
+!ENTRY org.eclipse.core.net 1 0 2009-04-04 22:16:14.465
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.adobe.flexbuilder.project 4 43 2009-04-04 22:16:36.517
+!MESSAGE Could not traverse changed resources in project flex.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/flex/src' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:310)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:193)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:46)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:103)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:87)
+	at com.adobe.flexbuilder.project.compiler.internal.BuilderUtils.copyDependents(Unknown Source)
+	at com.adobe.flexbuilder.project.compiler.internal.FlexProjectBuilder.build(Unknown Source)
+	at com.adobe.flexbuilder.project.compiler.internal.FlexIncrementalBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:624)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:166)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:197)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:246)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:249)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:334)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:137)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2009-04-04 22:16:36.518
+!MESSAGE Resource '/flex/src' does not exist.
+
+!ENTRY com.adobe.flexbuilder.project 4 43 2009-04-04 22:21:02.956
+!MESSAGE Could not traverse changed resources in project Albums.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/Albums/src' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:310)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:193)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:46)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:103)
+	at org.eclipse.core.internal.resources.Resource.accept(Resource.java:87)
+	at com.adobe.flexbuilder.project.compiler.internal.BuilderUtils.copyDependents(Unknown Source)
+	at com.adobe.flexbuilder.project.compiler.internal.FlexProjectBuilder.build(Unknown Source)
+	at com.adobe.flexbuilder.project.compiler.internal.FlexIncrementalBuilder.build(Unknown Source)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:624)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:166)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:197)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:246)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:249)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:334)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:137)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2009-04-04 22:21:02.957
+!MESSAGE Resource '/Albums/src' does not exist.
+!SESSION 2009-04-06 22:55:18.697 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.5.0_16
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=carbon, NL=en_US
+Command-line arguments:  -os macosx -ws carbon -arch x86
+
+!ENTRY org.eclipse.core.net 1 0 2009-04-06 22:55:34.219
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 4 0 2009-04-06 23:06:30.629
+!MESSAGE Undefined context while filtering dialog/window contexts
+!STACK 0
+org.eclipse.core.commands.common.NotDefinedException: Cannot get the parent identifier from an undefined context. org.eclipse.debug.ui.BreakpointView
+	at org.eclipse.core.commands.contexts.Context.getParentId(Context.java:201)
+	at org.eclipse.jface.bindings.BindingManager.createFilteredContextTreeFor(BindingManager.java:825)
+	at org.eclipse.jface.bindings.BindingManager.recomputeBindings(BindingManager.java:1720)
+	at org.eclipse.jface.bindings.BindingManager.contextManagerChanged(BindingManager.java:689)
+	at org.eclipse.core.commands.contexts.ContextManager.fireContextManagerChanged(ContextManager.java:152)
+	at org.eclipse.core.commands.contexts.ContextManager.addActiveContext(ContextManager.java:96)
+	at org.eclipse.ui.internal.contexts.ContextAuthority.updateContext(ContextAuthority.java:765)
+	at org.eclipse.ui.internal.contexts.ContextAuthority.activateContext(ContextAuthority.java:179)
+	at org.eclipse.ui.internal.contexts.ContextService.activateContext(ContextService.java:88)
+	at org.eclipse.ui.internal.contexts.SlaveContextService.doActivateContext(SlaveContextService.java:279)
+	at org.eclipse.ui.internal.contexts.SlaveContextService.activateContext(SlaveContextService.java:164)
+	at org.eclipse.ui.internal.contexts.SlaveContextService.activateContext(SlaveContextService.java:133)
+	at org.eclipse.ui.internal.contexts.SlaveContextService.doActivateContext(SlaveContextService.java:279)
+	at org.eclipse.ui.internal.contexts.SlaveContextService.activateContext(SlaveContextService.java:122)
+	at org.eclipse.debug.internal.ui.views.breakpoints.BreakpointsView.partActivated(BreakpointsView.java:768)
+	at org.eclipse.ui.internal.PartListenerList$1.run(PartListenerList.java:72)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:37)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:857)
+	at org.eclipse.ui.internal.PartListenerList.fireEvent(PartListenerList.java:57)
+	at org.eclipse.ui.internal.PartListenerList.firePartActivated(PartListenerList.java:70)
+	at org.eclipse.ui.internal.PartService.firePartActivated(PartService.java:73)
+	at org.eclipse.ui.internal.PartService.setActivePart(PartService.java:171)
+	at org.eclipse.ui.internal.WorkbenchPagePartList.fireActivePartChanged(WorkbenchPagePartList.java:56)
+	at org.eclipse.ui.internal.PartList.setActivePart(PartList.java:126)
+	at org.eclipse.ui.internal.WorkbenchPage.setActivePart(WorkbenchPage.java:3402)
+	at org.eclipse.ui.internal.WorkbenchPage.requestActivation(WorkbenchPage.java:2946)
+	at org.eclipse.ui.internal.PartPane.requestActivation(PartPane.java:265)
+	at org.eclipse.ui.internal.PartPane.setFocus(PartPane.java:311)
+	at org.eclipse.ui.internal.PartStack.presentationSelectionChanged(PartStack.java:846)
+	at org.eclipse.ui.internal.PartStack.access$1(PartStack.java:829)
+	at org.eclipse.ui.internal.PartStack$1.selectPart(PartStack.java:139)
+	at org.eclipse.ui.internal.presentations.util.TabbedStackPresentation$1.handleEvent(TabbedStackPresentation.java:131)
+	at org.eclipse.ui.internal.presentations.util.AbstractTabFolder.fireEvent(AbstractTabFolder.java:267)
+	at org.eclipse.ui.internal.presentations.util.AbstractTabFolder.fireEvent(AbstractTabFolder.java:276)
+	at org.eclipse.ui.internal.presentations.r33.DefaultTabFolder.access$1(DefaultTabFolder.java:1)
+	at org.eclipse.ui.internal.presentations.r33.DefaultTabFolder$2.handleEvent(DefaultTabFolder.java:84)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:66)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1495)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1519)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1504)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1295)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:3227)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:2005)
+	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:316)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:66)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1495)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1519)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1504)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1295)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3350)
+	at org.eclipse.swt.widgets.Control.sendTrackEvents(Control.java:2734)
+	at org.eclipse.swt.widgets.Control.actionProc(Control.java:115)
+	at org.eclipse.swt.widgets.Display.actionProc(Display.java:355)
+	at org.eclipse.swt.internal.carbon.OS.CallNextEventHandler(Native Method)
+	at org.eclipse.swt.widgets.Widget.kEventControlTrack(Widget.java:1062)
+	at org.eclipse.swt.widgets.Control.kEventControlTrack(Control.java:1950)
+	at org.eclipse.swt.widgets.Widget.controlProc(Widget.java:367)
+	at org.eclipse.swt.widgets.Display.controlProc(Display.java:835)
+	at org.eclipse.swt.internal.carbon.OS.SendEventToEventTarget(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2938)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2389)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2353)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2219)
+	at org.eclipse.ui.internal.Workbench$4.run(Workbench.java:466)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:289)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:461)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at com.adobe.flexbuilder.standalone.FlexBuilderApplication.start(FlexBuilderApplication.java:112)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:169)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:106)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:76)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:363)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:508)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:447)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1173)
+!SESSION 2009-04-06 23:17:34.121 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.5.0_16
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=carbon, NL=en_US
+Command-line arguments:  -os macosx -ws carbon -arch x86
+
+!ENTRY org.eclipse.core.net 1 0 2009-04-06 23:17:42.945
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2009-04-11 08:56:11.485 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.5.0_16
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=carbon, NL=en_US
+Command-line arguments:  -os macosx -ws carbon -arch x86
+
+!ENTRY org.eclipse.core.net 1 0 2009-04-11 08:56:31.023
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2009-04-18 09:45:54.642 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.5.0_16
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=carbon, NL=en_US
+Command-line arguments:  -os macosx -ws carbon -arch x86
+
+!ENTRY org.eclipse.core.net 1 0 2009-04-18 09:46:13.102
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2009-05-06 08:04:29.915 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.5.0_16
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=carbon, NL=en_US
+Command-line arguments:  -os macosx -ws carbon -arch x86
+
+!ENTRY org.eclipse.core.net 1 0 2009-05-06 08:04:49.079
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2009-06-15 23:37:59.919 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.5.0_16
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=carbon, NL=en_US
+Command-line arguments:  -os macosx -ws carbon -arch x86
+
+!ENTRY org.eclipse.core.net 1 0 2009-06-15 23:38:15.108
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2009-06-16 20:58:16.776 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.5.0_16
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=carbon, NL=en_US
+Command-line arguments:  -os macosx -ws carbon -arch x86
+
+!ENTRY org.eclipse.ui 4 0 2009-06-16 20:58:24.907
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: Argument cannot be null
+	at org.eclipse.swt.SWT.error(SWT.java:3547)
+	at org.eclipse.swt.SWT.error(SWT.java:3481)
+	at org.eclipse.swt.SWT.error(SWT.java:3452)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1097)
+	at org.eclipse.swt.widgets.Display.removeListener(Display.java:3176)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor.preShutdown(IDEWorkbenchAdvisor.java:323)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:837)
+	at org.eclipse.ui.internal.Workbench.access$15(Workbench.java:834)
+	at org.eclipse.ui.internal.Workbench$22.run(Workbench.java:1078)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1076)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1048)
+	at org.eclipse.ui.internal.Workbench$56.handleEvent(Workbench.java:2274)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:66)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:3458)
+	at org.eclipse.swt.widgets.Display.coreEventProc(Display.java:842)
+	at org.eclipse.swt.internal.carbon.OS.AEProcessAppleEvent(Native Method)
+	at org.eclipse.swt.widgets.Display.appleEventProc(Display.java:393)
+	at org.eclipse.swt.internal.carbon.OS.SendEventToEventTarget(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:2938)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2309)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2219)
+	at org.eclipse.ui.internal.Workbench$4.run(Workbench.java:466)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:289)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:461)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at com.adobe.flexbuilder.standalone.FlexBuilderApplication.start(FlexBuilderApplication.java:112)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:169)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:106)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:76)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:363)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:176)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:585)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:508)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:447)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1173)

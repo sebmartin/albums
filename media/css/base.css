@@ -1,0 +1,214 @@
+body
+{
+    background: #e7e7e7 url(/media/images/base/bg-main-repeat.jpg) repeat-y;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 10pt;
+}
+
+div.main-top
+{
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    width: 720px;
+    height: 147px;
+    background: url(/media/images/base/bg-main-top.jpg) no-repeat top left
+}
+
+div.breadcrumb
+{
+    font-size: 8pt; 
+    color: white;
+    margin-top: 94px;
+    margin-left: 160px;
+}
+
+div.breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
+
+div.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* base style for both album and thumbnail divs */
+div.thumbnail, div.album
+{
+    margin: 4px;
+    padding: 0px;
+    text-align: center;
+}
+
+/* [ALBUM LIST] */
+div.albums-repeat
+{
+    background: url(/media/images/base/bg-albums-repeat.jpg) repeat-y;
+    border: none;
+    position: absolute;
+    top: 144px;
+    left: 0px;
+    width: 170px;
+}
+
+div.albums-top
+{
+    background: url(/media/images/base/bg-albums-top.jpg) no-repeat top left;
+    height: 100%;
+}
+
+div.albums-bottom
+{
+    background: url(/media/images/base/bg-albums-bottom.jpg) no-repeat bottom left;
+    padding: 6px;
+    min-height: 155px;
+    height: 100%;
+}
+
+div.albums-list
+{
+    text-align: center;
+    border: 1px dashed #999999;
+}
+
+a.albums-title
+{
+    font-weight: bold;
+    text-decoration: none;
+}
+a.albums-title:hover
+{
+    text-decoration: underline;
+}
+
+div.album
+{
+    /*height: 136px;
+    width: 145px;*/
+    margin-bottom: 30px;
+}
+
+div.album span.title
+{
+    font-weight: bold;
+}
+
+div.album span.date
+{
+font-size: 8pt;
+}
+
+/* [THUMBNAIL LIST] */
+div.thumblist-repeat
+{
+    background-image: url(/media/images/base/bg-thumbs-repeat.jpg);
+    background-repeat: repeat-y;
+    border: none;
+    position: absolute;
+    top: 144px;
+    left: 170px;
+    width: 542px;
+}
+
+div.thumblist-top
+{
+    background: url(/media/images/base/bg-thumbs-top.jpg) no-repeat top left;
+    height: 100%;
+}
+
+div.thumblist-right
+{
+    /* use same image as the "full width" box */
+    background: url(/media/images/base/bg-full-right.jpg) no-repeat top right;
+    height: 100%;
+}
+
+div.thumblist-bottom
+{
+    background: url(/media/images/base/bg-thumbs-bottom.jpg) no-repeat bottom left;
+    background-position-x: bottom; /* for IE! */
+    min-height: 352px;
+    padding-top: 10px;
+    padding-left: 12px;
+    padding-right: 70px;
+    height: 100%;
+    text-align: center;
+}
+
+div.thumbnail
+{
+    height: 136px;
+    width: 145px;
+    float: left; 
+    line-height: 128px;  /* <-- for the vertical-align to work! */
+}
+
+div.thumbnail-image
+{
+    padding: 0px;
+    width: 128px;
+    height: 128px;
+    text-align: center;
+}
+
+img.thumbnail-image
+{
+    vertical-align: middle;
+    padding: 4px;
+    border: solid #CCCCCC 1px;
+    background:#F4F4F4;
+}
+img.thumbnail-image:hover
+{
+    background: #CCCCCC;
+    border: solid #AAAAAA 1px;
+}
+
+/* [FULL-WIDTH BOX] */
+div.full-repeat
+{
+    background-image: url(/media/images/base/bg-full-repeat.jpg);
+    background-repeat: repeat-y;
+    border: none;
+    position: absolute;
+    top: 144px;
+    left: 0px;
+    width: 712px;
+}
+
+div.full-top
+{
+    background: url(/media/images/base/bg-full-top.jpg) no-repeat top left;
+    height: 100%;
+}
+
+div.full-right
+{
+    /* use same image as the "full width" box */
+    background: url(/media/images/base/bg-full-right.jpg) no-repeat top right;
+    height: 100%;
+}
+
+div.full-bottom
+{
+    background: url(/media/images/base/bg-full-bottom.jpg) no-repeat bottom left;
+    background-position-x: bottom; /* for IE! */
+    min-height: 352px;
+    padding: 6px;
+    padding-left: 16px;
+    padding-right: 70px;
+    height: 100%;
+}
+
+.paginator a {
+    color: black;
+    text-decoration: none;
+}
+
+.paginator a:hover {
+    text-decoration: underline;
+}
+
+.page-number-current {
+    font-weight: bold;
+}

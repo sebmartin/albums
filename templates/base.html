@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Seb and Shaun's Albums{% block page_title %}{% endblock %}</title>
+</head>
+
+<!-- includes for lightbox -->
+<script type="text/javascript" src="/media/js/fancybox/jquery.js"></script> 
+<script type="text/javascript" src="/media/js/fancybox/jquery.metadata.js"></script> 
+<script type="text/javascript" src="/media/js/fancybox/jquery.pngFix.js"></script> 
+<script type="text/javascript" src="/media/js/fancybox/jquery.fancybox.js"></script> 
+<link rel="stylesheet" href="/media/js/fancybox/fancy.css" type="text/css" media="screen">
+
+<link rel="stylesheet" type="text/css" href="/media/css/base.css"/>
+
+<script language="javascript">
+{% block js %}{% endblock %}
+</script>
+
+<body>
+
+<div class="main-top">
+    <div class="breadcrumb">
+    <a href="/">Home</a> {{ breadcrumb|safe }} 
+    </div>
+</div>
+
+<!-- [ALBUM LIST] -->
+<div class="albums-repeat">
+<div class="albums-top">
+<div class="albums-bottom"><img src="/media/images/design/transparant.gif" width="1" height="150" align="left"/>
+{% block side_bar %}
+{% for album in albums %}
+<div class="album">
+    <a 
+        href="/album/{{ album.id }}" 
+        style="padding: 3px;"
+    ><img 
+        alt="{{ album.title }}" 
+        src="{{ album.albumthumbnail_set.all.0.url }}"
+        width="{{ album.albumthumbnail_set.all.0.width }}"
+        height="{{ album.albumthumbnail_set.all.0.height }}"
+        border="0"
+        class="thumbnail-image" 
+    /></a><br/>
+    <span class="title">{{ album.title }}</span><br/>
+    <span class="date">{{ album.create_time|date:"M jS Y" }}</span>
+</div>
+{% endfor %}
+{% endblock %}
+</div></div></div>
+
+<!-- [THUMBNAILS] -->
+<div 
+ class="thumblist-repeat"><div 
+ class="thumblist-top"><div 
+ class="thumblist-right"><div 
+ class="thumblist-bottom"><img src="/media/images/design/transparant.gif" width="1" height="352" align="left"/>
+{% block main_content %}{% endblock %}
+</div> </div></div></div>
+
+</body>
+</html>
